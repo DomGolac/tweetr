@@ -33,3 +33,74 @@ main {
   padding-right: 2em;
   padding-left: 2em;
 }
+
+section#tweets {
+  width: 90%;
+  margin: auto;
+}
+
+article.tweet {
+  margin: 10px 0;
+  background-color: white;
+  border: 1px grey solid;
+  border-radius: 5px;
+}
+
+article.tweet header img, p, span{
+  display: inline-block;
+}
+
+article.tweet header {
+  border-radius: 5px 5px 0 0;
+  background-color: #eee;
+  text-align: top;
+  height: 70px;
+}
+
+article.tweet header p {
+  padding-top: 10px;
+  margin: 0;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+article.tweet header span {
+  float: right;
+  padding: 10px;
+}
+
+section#tweets article.tweet header img {
+  float: left;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+article.tweet > p {
+  padding: 10px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+article.tweet footer{
+  background-color: white;
+  border-radius: 0 0 5px 5px;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+}
+
+article.tweet footer span.icons {
+  float: right;
+}
+
+article.tweet footer span.icons i {
+  color: #aaa;
+}
+
+article.tweet footer span.icons i:hover {
+  color: #00a087;
+}
