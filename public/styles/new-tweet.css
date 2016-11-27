@@ -22,3 +22,7 @@ hr {
 .counter {
   float: right;
 }
+
+.red-text {
+  color: red;
+}
