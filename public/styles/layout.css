@@ -54,7 +54,7 @@ article.tweet header {
   border-radius: 5px 5px 0 0;
   background-color: #eee;
   text-align: top;
-  height: 70px;
+  height: 60px;
 }
 
 article.tweet header p {
@@ -69,13 +69,13 @@ article.tweet header span {
   padding: 10px;
 }
 
-section#tweets article.tweet header img {
+article.tweet header img {
   float: left;
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 50px;
   height: 50px;
-  margin: 10px;
+  margin: 5px;
 }
 
 article.tweet > p {
@@ -98,6 +98,7 @@ article.tweet footer span.icons {
 }
 
 article.tweet footer span.icons i {
+  margin: 5px;
   color: #aaa;
 }
 
