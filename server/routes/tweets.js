@@ -13,7 +13,7 @@ module.exports = function(DataHelpers) {
         res.status(500).json({ error: err.message });
       } else {
         res.json(tweets);
-      }
+      };
     });
   });
 
@@ -21,7 +21,7 @@ module.exports = function(DataHelpers) {
     if (!req.body.text) {
       res.status(400).json({ error: 'invalid request: no data in POST body'});
       return;
-    }
+    };
 
     const user = req.body.user ? req.body.user : userHelper.generateRandomUser();
     const tweet = {
@@ -37,10 +37,9 @@ module.exports = function(DataHelpers) {
         res.status(500).json({ error: err.message });
       } else {
         res.status(201).send();
-      }
+      };
     });
+    res.json(tweet);
   });
-
   return tweetsRoutes;
-
-}
+};
