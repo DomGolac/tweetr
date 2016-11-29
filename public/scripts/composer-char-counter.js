@@ -7,7 +7,7 @@ $(document).on("ready", function() {
     if (length >= 140) {
       $(".counter").addClass("red-text");
     };
-    if ($(".counter").hasClass("red-text") && length < 140) {
+    if ($(".counter").hasClass("red-text") && length <= 140) {
       $(".counter").removeClass("red-text");
     };
   });

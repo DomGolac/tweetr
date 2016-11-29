@@ -28,7 +28,7 @@ main {
   width: 450px;
   background-color: white;
   margin: auto;
-  padding-top: 140px;
+  padding-top: 90px;
   padding-bottom: 20px;
   padding-right: 2em;
   padding-left: 2em;
@@ -44,6 +44,7 @@ article.tweet {
   background-color: white;
   border: 1px grey solid;
   border-radius: 5px;
+  word-wrap: break-word;
 }
 
 article.tweet header img, p, span{

@@ -23,12 +23,13 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
+      <div id="compose-button"><span>Compose</span></div>
     </nav>
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form id="newTweet" method="POST" action="/tweets">
+        <form method="POST" action="/tweets">
           <textarea name="text" placeholder="What are you bitchin' about?"></textarea>
           <input type="submit" value="Tweet">
           <span class="counter">140</span>

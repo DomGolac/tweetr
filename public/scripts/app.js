@@ -23,6 +23,8 @@ $(document).on("ready", function() {
       }
     });
   };
+  
+  loadTweets();
 
   function createTweetElement(tweet) {
     var article = $('<article>').addClass('tweet');
@@ -61,30 +63,34 @@ $(document).on("ready", function() {
     return formattedTweet;
   };
 
-  $('#newTweet').on('submit', function() {
+  $('.new-tweet').on('submit', function() {
     event.preventDefault();
-    var theForm = $(this);
-    var value = $("#newTweet textarea").val().length;
+    var theForm = $(this).find('form');
+    var value = $(".new-tweet textarea").val().length;
     var error = $('<div id="error">').addClass('red-text')
                 .text("ERROR: MUST BE 1-140 CHARACTERS IN LENGTH!!!");
-    if (value < 1 || value >= 140) {
-        if (!$('#newTweet div').text()) {
-          $('#newTweet').append(error);
+    if (value < 1 || value > 140) {
+        if (!$('.new-tweet div').text()) {
+          $('.new-tweet').append(error);
           return;
         };
     } else {
-      if ($('#newTweet div').text()) {
-        $('#newTweet div').remove();
+      if ($('.new-tweet div').text()) {
+        $('.new-tweet div').remove();
       };
       $.ajax({
         method: theForm.attr('method'),
         url: theForm.attr('action'),
         data: theForm.serialize()
       }).done(function(tweet) {
-        $('#newTweet textarea').val("");
+        $('.new-tweet textarea').val("").focus();
+        $('.counter').text('140');
         renderTweet(tweet);
       });
     };
   });
-  loadTweets();
+  $('#compose-button').on("click", function() {
+    $('.new-tweet').slideToggle("slow");
+    $('.new-tweet textarea').focus();
+  });
 });
